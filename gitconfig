@@ -1,0 +1,16 @@
+[alias]
+	tr = log --pretty=oneline --graph --decorate --all
+[user]
+	email = thadsauter@gmail.com
+	name = Thad Sauter
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = /Users/thadsauter/.gitignore

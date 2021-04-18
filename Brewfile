@@ -1,0 +1,23 @@
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+
+brew "fzf"
+brew "neofetch"
+brew "neovim"
+brew "rbenv"
+brew "redis", restart_service: true
+brew "tmux"
+brew "yarn"
+brew "zsh"
+
+cask "alfred"
+cask "google-chrome"
+cask "karabiner-elements"
+cask "iterm2"
+cask "ngrok"
+cask "spotify"
+cask "1password"

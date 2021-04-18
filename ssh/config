@@ -1,0 +1,9 @@
+IdentitiesOnly yes
+
+Host github.com
+  User git
+  IdentityFile ~/.ssh/thad.github.com
+
+Host school 
+  HostName access.engr.oregonstate.edu
+  User sautert
