@@ -11,6 +11,6 @@ Generally it's not a good idea to blindly copy others dotfiles, but it can somet
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 2. Clone this repo and let the magic begin\
-`git clone git@github.com:th-ad/dotfiles.git ~/dotfiles && cd ~/dotfiles && .install`
+`git clone git@github.com:th-ad/dotfiles.git ~/dotfiles && cd ~/dotfiles && ./install`
 
 It's that simple.
