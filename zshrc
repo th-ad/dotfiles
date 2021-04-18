@@ -1,5 +1,7 @@
 PROMPT='%n %. > '
 
+source ~/.zprofile
+
 # Reuse ssh-agent
 /usr/local/bin/keychain $HOME/.ssh/thad.github.com &> /dev/null
 source $HOME/.keychain/$HOST-sh &> /dev/null

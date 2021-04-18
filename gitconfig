@@ -13,4 +13,4 @@
 [branch]
 	autosetuprebase = always
 [core]
-	excludesfile = /Users/thadsauter/.gitignore
+	excludesfile = ~/.gitignore
