@@ -1,7 +1,7 @@
 - defaults:
+    link:
+      relink: true
     brewfile:
-      stdout: false
-      stderr: false
       include: ['tap', 'brew', 'cask', 'mas']
 
 - brewfile:
@@ -18,4 +18,6 @@
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-
+    ~/.config/karabiner/karabiner.json:
+      create: true
+      path: config/karabiner/karabiner.json
