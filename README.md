@@ -7,10 +7,16 @@ Generally it's not a good idea to blindly copy others dotfiles, but it can somet
 
 # Installation
 
-1. Install brew\
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+1. Install brew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-2. Clone this repo and let the magic begin\
-`git clone git@github.com:th-ad/dotfiles.git ~/dotfiles && cd ~/dotfiles && ./install`
+2. Clone this repo and let the magic begin
+```
+git clone git@github.com:th-ad/dotfiles.git ~/dotfiles && cd ~/dotfiles
+git submodule init && git submodule update
+./install
+```
 
 It's that simple.
