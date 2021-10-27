@@ -7,3 +7,6 @@ Host github.com
 Host school 
   HostName access.engr.oregonstate.edu
   User sautert
+
+Host *
+  UseKeychain yes

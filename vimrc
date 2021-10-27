@@ -1,8 +1,9 @@
 " Thad Sauter vim config
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync --insecure | source $MYVIMRC
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -24,7 +25,6 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tonchis/vim-to-github'
-Plug 'lyuts/vim-rtags'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-rhubarb'
 " Text objects

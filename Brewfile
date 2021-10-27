@@ -9,7 +9,6 @@ brew "fzf"
 brew "neofetch"
 brew "neovim"
 brew "rbenv"
-brew "redis", restart_service: true
 brew "tmux"
 brew "yarn"
 brew "zsh"
