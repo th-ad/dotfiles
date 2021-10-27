@@ -1,5 +1,4 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -21,3 +20,6 @@ cask "ngrok"
 cask "slack"
 cask "spotify"
 cask "1password"
+
+# fonts
+cask "font-fira-code-nerd-font"
