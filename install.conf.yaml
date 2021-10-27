@@ -21,3 +21,6 @@
     ~/.config/karabiner/karabiner.json:
       create: true
       path: config/karabiner/karabiner.json
+    ~/.config/nvim/init.vim:
+      create: true
+      path: config/nvim/init.vim
