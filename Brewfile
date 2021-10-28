@@ -13,6 +13,7 @@ brew "yarn"
 brew "zsh"
 
 cask "alfred"
+cask "docker"
 cask "google-chrome"
 cask "karabiner-elements"
 cask "iterm2"
