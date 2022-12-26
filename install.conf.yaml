@@ -12,15 +12,20 @@
 - link:
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
-        path: ssh/config
-        create: true
+      path: ssh/config
+      create: true
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
     ~/.config/karabiner/karabiner.json:
       create: true
+      force: true
       path: config/karabiner/karabiner.json
     ~/.config/nvim/init.vim:
       create: true
       path: config/nvim/init.vim
+    ~/.config/lvim/config.lua:
+      create: true
+      force: true
+      path: config/lvim/config.lua

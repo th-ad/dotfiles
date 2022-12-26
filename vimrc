@@ -114,8 +114,8 @@ set nowrap
 set expandtab
 set number
 set relativenumber
-autocmd FileType python set softtabstop=2
 set hidden
+autocmd FileType python set softtabstop=2
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadSquare

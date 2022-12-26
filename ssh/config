@@ -8,5 +8,30 @@ Host school
   HostName access.engr.oregonstate.edu
   User sautert
 
+Host nex-vpn
+  HostName vpn-nex.nexhealth-it.com
+  User ec2-user
+  IdentityFile ~/.ssh/nexhealth-vpn.pem
+
+Host nex-vpn2
+  HostName vpn2.nexhealth-it.com
+  User ec2-user
+  IdentityFile ~/.ssh/nexhealth-vpn.pem
+
+Host nex-vpn3
+  HostName vpn3.nexhealth-it.com
+  User ec2-user
+  IdentityFile ~/.ssh/nexhealth-vpn.pem
+
+Host nex-vpn4
+  HostName vpn4.nexhealth-it.com
+  User ec2-user
+  IdentityFile ~/.ssh/nexhealth-vpn.pem
+
 Host *
   UseKeychain yes
+
+# SSH over SSM (AWS)
+Host i-* mi-*
+  User ssm-user
+  ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
