@@ -26,6 +26,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'tonchis/vim-to-github'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-rhubarb'
+
 " Text objects
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -146,6 +147,7 @@ nnoremap <leader>= :wincmd =<cr>
 
 " Enable linting
 let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop']}
+let g:ale_ruby_rubocop_executable = '/Users/thad/scripts/backend/rubocop_docker_script.sh'
 
 " Save current view settings on a per-window, per-buffer basis.
 function! AutoSaveWinView()
@@ -177,8 +179,9 @@ endif                                                                 "
 " Copy to clipboard as well
 set clipboard=unnamed
 
-" don't use binstubs for running tests
+" Vim-test setup
 let test#ruby#use_binstubs = 0
+let test#ruby#rspec#executable = 'docker-compose exec spring doppler run -- bundle exec rspec'
 
 " Text object dependencies
 runtime macros/matchit.vim

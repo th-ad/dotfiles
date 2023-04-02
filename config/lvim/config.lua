@@ -23,6 +23,29 @@ vim.api.nvim_create_user_command("TestN", 'lua require("neotest").run.run()', {}
 vim.api.nvim_create_user_command("TestF", 'lua require("neotest").run.run(vim.fn.expand("%"))', {})
 vim.api.nvim_create_user_command("TestS", 'lua require("neotest").summary.toggle()', {})
 
+-- copilot
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
+local cmp = require "cmp"
+
+lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
+  if cmp.visible() then
+    cmp.select_next_item()
+  else
+    local copilot_keys = vim.fn["copilot#Accept"]()
+    if copilot_keys ~= "" then
+      vim.api.nvim_feedkeys(copilot_keys, "i", true)
+    else
+      fallback()
+    end
+  end
+end
+
+-- vim-gh-line
+vim.g.gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
+vim.g.gh_line_map = "<C-o>"
+
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
@@ -38,7 +61,6 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
-  "c",
   "javascript",
   "json",
   "lua",
@@ -48,36 +70,35 @@ lvim.builtin.treesitter.ensure_installed = {
   "css",
   "rust",
   "ruby",
-  "java",
   "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
+lvim.builtin.telescope.defaults.preview = false
+
 -- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "rubocop", filetypes = { "ruby" } },
+}
+
+-- set additional formatters
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  sources = {
+    "lvim.lsp.null-ls.builtins.formatting.prettier",
+  },
+}
 
 -- additional plugins
 lvim.plugins = {
   { "tpope/vim-fugitive" },
   { "tpope/vim-repeat" },
   { "tpope/vim-surround" },
+  { "github/copilot.vim" },
+  { "ruanyl/vim-gh-line" },
   {
     "nvim-neotest/neotest",
     requires = {
