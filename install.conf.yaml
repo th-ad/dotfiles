@@ -16,15 +16,20 @@
       create: true
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.zprofile: zprofile
+    ~/.zprofile:
+      create: true
+      force: true
+      path: zprofile
     ~/.zshrc: zshrc
     ~/.config/karabiner/karabiner.json:
       create: true
       force: true
       path: config/karabiner/karabiner.json
-    ~/.config/nvim/init.vim:
+    ~/.config/nvim/:
+      glob: true
       create: true
-      path: config/nvim/init.vim
+      relink: true
+      path: config/nvim/**
     ~/.config/lvim/config.lua:
       create: true
       force: true
