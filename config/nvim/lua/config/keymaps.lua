@@ -10,7 +10,3 @@ map("n", "<C-s>", ":w<CR>", { silent = true })
 map("n", "<C-e>", ":Neotree toggle<CR>", { silent = true })
 map("n", "<C-p>", ":Telescope git_files<CR>", { silent = true })
 map("n", "<C-f>", ":Telescope live_grep<CR>", { silent = true })
-map("n", "<C-m>", "<Plug>(comment_toggle_linewise_current)", { silent = true })
-
--- Visual BLock
-map("x", "<C-m>", "<Plug>(comment_toggle_linewise_visual)", { silent = true })

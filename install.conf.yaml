@@ -2,14 +2,31 @@
     link:
       relink: true
     brewfile:
-      include: ['tap', 'brew', 'cask', 'mas']
+      include: ["tap", "brew", "cask", "mas"]
 
 - brewfile:
     file: Brewfile
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
+    ~/.config/ghostty/config:
+      create: true
+      force: true
+      path: config/ghostty/config
+    ~/.config/karabiner/karabiner.json:
+      create: true
+      force: true
+      path: config/karabiner/karabiner.json
+    ~/.config/lvim/config.lua:
+      create: true
+      force: true
+      path: config/lvim/config.lua
+    ~/.config/nvim/:
+      glob: true
+      create: true
+      relink: true
+      path: config/nvim/**
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
       path: ssh/config
@@ -21,16 +38,3 @@
       force: true
       path: zprofile
     ~/.zshrc: zshrc
-    ~/.config/karabiner/karabiner.json:
-      create: true
-      force: true
-      path: config/karabiner/karabiner.json
-    ~/.config/nvim/:
-      glob: true
-      create: true
-      relink: true
-      path: config/nvim/**
-    ~/.config/lvim/config.lua:
-      create: true
-      force: true
-      path: config/lvim/config.lua
