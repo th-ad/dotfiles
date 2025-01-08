@@ -9,8 +9,6 @@ vim.filetype.add({
   },
 })
 
-vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_ruby_lsp = "disabled"
-vim.g.lazyvim_ruby_formatter = "rubocop"
 
 vim.g.lazyvim_prettier_needs_config = false

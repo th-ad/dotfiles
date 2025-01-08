@@ -8,5 +8,5 @@ vim.g.mapleader = " "
 -- Normal
 map("n", "<C-s>", ":w<CR>", { silent = true })
 map("n", "<C-e>", ":Neotree toggle<CR>", { silent = true })
-map("n", "<C-p>", ":Telescope git_files<CR>", { silent = true })
-map("n", "<C-f>", ":Telescope live_grep<CR>", { silent = true })
+map("n", "<C-p>", ":FzfLua git_files<CR>", { silent = true })
+map("n", "<C-f>", ":FzfLua live_grep_native<CR>", { silent = true })
