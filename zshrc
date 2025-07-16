@@ -34,3 +34,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # bun completions
 [ -s "/Users/thad/.bun/_bun" ] && source "/Users/thad/.bun/_bun"
+
+export DIRENV_LOG_FORMAT=""
+export CANARY_DIR="$HOME/canary"
+eval "$(direnv hook zsh)"

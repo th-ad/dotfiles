@@ -12,6 +12,6 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 # Add .NET Core SDK tools
 export PATH="$PATH:/Users/thad/.dotnet/tools"

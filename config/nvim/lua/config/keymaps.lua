@@ -7,6 +7,12 @@ vim.g.mapleader = " "
 
 -- Normal
 map("n", "<C-s>", ":w<CR>", { silent = true })
-map("n", "<C-e>", ":Neotree toggle<CR>", { silent = true })
-map("n", "<C-p>", ":FzfLua git_files<CR>", { silent = true })
-map("n", "<C-f>", ":FzfLua live_grep_native<CR>", { silent = true })
+map("n", "<C-e>", function()
+  Snacks.explorer.open()
+end, { silent = true })
+map("n", "<C-p>", function()
+  Snacks.picker.files()
+end, { silent = true })
+map("n", "<C-f>", function()
+  Snacks.picker.grep()
+end, { silent = true })

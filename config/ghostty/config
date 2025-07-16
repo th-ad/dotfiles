@@ -13,3 +13,4 @@ keybind = ctrl+s>l=previous_tab
 mouse-hide-while-typing = true
 shell-integration-features = no-cursor
 theme = catppuccin-macchiato
+keybind = shift+enter=text:\n
