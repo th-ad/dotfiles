@@ -27,6 +27,14 @@
       create: true
       relink: true
       path: config/nvim/**
+    ~/.config/skhd/skhdrc:
+      create: true
+      force: true
+      path: config/skhd/skhdrc
+    ~/.config/yabai/yabairc:
+      create: true
+      force: true
+      path: config/yabai/yabairc
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
       path: ssh/config

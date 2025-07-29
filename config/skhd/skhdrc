@@ -1,0 +1,3 @@
+cmd + rctrl - h : yabai -m space --focus prev
+cmd + rctrl - l : yabai -m space --focus next
+cmd + rctrl - x : yabai -m window --close && yabai -m window --focus mouse
