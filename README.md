@@ -1,10 +1,6 @@
 # Dotfiles
 
-These are a collection of dotfiles near and dear to my <3
-
-Installation is made easy using [Dotbot](https://github.com/anishathalye/dotbot).
-
-Generally it's not a good idea to blindly copy others dotfiles, but it can sometimes be useful as a starting point.
+Built with [Dotbot](https://github.com/anishathalye/dotbot).
 
 ## Installation
 
@@ -14,12 +10,10 @@ Generally it's not a good idea to blindly copy others dotfiles, but it can somet
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. Clone this repo and let the magic begin
+2. Clone the repo and run the install script
 
 ```bash
 git clone git@github.com:th-ad/dotfiles.git ~/dotfiles && cd ~/dotfiles
 git submodule init && git submodule update
 ./install
 ```
-
-It's that simple.
