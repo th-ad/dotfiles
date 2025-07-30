@@ -4,3 +4,4 @@ shell-integration-features = no-cursor
 theme = catppuccin-macchiato
 keybind = shift+enter=text:\n
 window-decoration = none
+macos-icon = xray

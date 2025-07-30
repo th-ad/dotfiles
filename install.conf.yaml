@@ -16,7 +16,6 @@
       path: config/ghostty/config
     ~/.config/karabiner/karabiner.json:
       create: true
-      force: true
       path: config/karabiner/karabiner.json
     ~/.config/lvim/config.lua:
       create: true
@@ -27,14 +26,10 @@
       create: true
       relink: true
       path: config/nvim/**
-    ~/.config/skhd/skhdrc:
+    ~/.config/aerospace/aerospace.toml:
       create: true
       force: true
-      path: config/skhd/skhdrc
-    ~/.config/yabai/yabairc:
-      create: true
-      force: true
-      path: config/yabai/yabairc
+      path: config/aerospace/aerospace.toml
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
       path: ssh/config

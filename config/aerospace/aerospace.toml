@@ -1,0 +1,104 @@
+start-at-login = true
+after-login-command = []
+after-startup-command = []
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = "tiles"
+default-root-container-orientation = "auto"
+
+on-focus-changed = ["move-mouse window-lazy-center"]
+
+[key-mapping]
+preset = "qwerty"
+
+[gaps]
+inner.horizontal = 20
+inner.vertical = 20
+outer.left = 20
+outer.bottom = 20
+outer.top = 20
+outer.right = 20
+
+[mode.main.binding]
+cmd-ctrl-h = "workspace prev"
+cmd-ctrl-l = "workspace next"
+cmd-ctrl-x = "close"
+
+cmd-ctrl-t = "workspace terminal"
+cmd-ctrl-w = "workspace web"
+cmd-ctrl-s = "workspace slack"
+cmd-ctrl-m = "workspace music"
+
+alt-h = "focus left"
+alt-j = "focus down"
+alt-k = "focus up"
+alt-l = "focus right"
+
+alt-shift-h = "move left"
+alt-shift-j = "move down"
+alt-shift-k = "move up"
+alt-shift-l = "move right"
+
+alt-shift-t = "move-node-to-workspace terminal"
+alt-shift-w = "move-node-to-workspace web"
+alt-shift-s = "move-node-to-workspace slack"
+alt-shift-m = "move-node-to-workspace music"
+
+[[on-window-detected]]
+if.app-id = "com.1password.1password"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.agilebits.onepassword7"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.ActivityMonitor"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.AppStore"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.DiskUtility"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.finder"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.pqrs.Karabiner-Elements"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.pqrs.Karabiner-EventViewer"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.MobileSMS"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "dev.kdrag0n.MacVirt"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "company.thebrowser.Browser"
+run = "move-node-to-workspace web"
+
+[[on-window-detected]]
+if.app-id = "com.mitchellh.ghostty"
+run = "move-node-to-workspace terminal"
+
+[[on-window-detected]]
+if.app-id = "com.spotify.client"
+run = "move-node-to-workspace music"
+
+[[on-window-detected]]
+if.app-id = "com.tinyspeck.slackmacgap"
+run = "move-node-to-workspace slack"
